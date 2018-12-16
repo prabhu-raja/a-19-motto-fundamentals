@@ -1,31 +1,8 @@
 <div class="app">
-    <h1>{{title}}</h1>
-    <h1 [innerHTML]="title"></h1>
-
-    <!-- *Doing 2 way data binding through input event binding -->
-    <!-- <input 
-        type="text" 
-        [value]="name" 
-        (blur)="handleBlur($event)"
-        (input)="handleInput($event)">  -->
     
-    <!-- *When using only [ngModel] property binding it works as one way data binding -->
-    <!-- <input 
-        type="text" 
-        [ngModel]="name"> -->
-
-    <!-- *When using [ngModel] property binding and (ngModelChange) event binding we can acheive 2 way data binding but still acheiving 2 way with event binding :( -->
-    <!-- <input 
-        type="text" 
-        [ngModel]="name" 
-        (ngModelChange)="handleChange($event)">  -->
-
-        <!-- *By using [(ngModel)] we can acheive 2 way binding -->
-        <input 
-            type="text" 
-            [(ngModel)]="name"> 
-        
+    <button (click)="handleClick(username.value)">
+        Get Value</button>
+    <input type="text" #username>
     <div>{{name}}</div>
 
-    <button (click)="handleClick()">Change Name</button>
 </div>
