@@ -7,8 +7,22 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title: string;
-  name: string = 'Jack'
+  name: string = 'Jack';
+
    constructor() {
      this.title = 'My Title🐝';
+   }
+
+   handleBlur(evnt: any) {
+     console.log('object :', evnt);
+     this.name = evnt.target.value;
+   }
+
+   handleInput(evnt: any) {
+     this.name = evnt.target.value;
+   }
+
+   handleClick() {
+     this.name = 'Jill';
    }
 }
