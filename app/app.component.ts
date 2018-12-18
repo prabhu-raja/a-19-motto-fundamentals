@@ -3,7 +3,8 @@ import { Component } from "@angular/core";
 interface Passenger {
   id: number,
   fullname: string,
-  checkedIn: boolean
+  checkedIn: boolean,
+  isVip: boolean
 }
 @Component({
   selector: 'app-root',
@@ -15,22 +16,27 @@ export class AppComponent {
   passengers: Passenger[] = [{
     id: 1,
     fullname: 'Stephen',
-    checkedIn: true
+    checkedIn: true,
+    isVip: false
   }, {
     id: 2,
     fullname: 'Rose',
-    checkedIn: false
+    checkedIn: false,
+    isVip: false
   }, {
     id: 3,
     fullname: 'James',
-    checkedIn: true
+    checkedIn: true,
+    isVip: true
   }, {
     id: 4,
     fullname: 'Louise',
-    checkedIn: true
+    checkedIn: true,
+    isVip: false
   }, {
     id: 5,
     fullname: 'Tina',
-    checkedIn: false
+    checkedIn: false,
+    isVip: true
   }];
 }
