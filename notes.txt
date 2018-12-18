@@ -1,2 +1,3 @@
 Two way Data - binding: https://github.com/prabhu-raja/a-19-motto-fundamentals/commit/43ae7bb2d63a2720dcfaefbeae1ac73236fb3f2f
 
+Tempate # ref variable - https://github.com/prabhu-raja/a-19-motto-fundamentals/commit/99a77b77802b6ad749383aa17b3ebe61c9c5eab7

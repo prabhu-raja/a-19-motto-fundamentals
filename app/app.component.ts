@@ -7,9 +7,9 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
 
-  name: string = 'Jack';
+  name: string = '';
 
-  handleClick(val: string) {
-    console.log('val :', val);
+  handleChange(val: string) {
+    this.name = val;
   }
 }
