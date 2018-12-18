@@ -1,17 +1,21 @@
 <div class="app">
+    <h3>Airline Passengers</h3>
+    <ul>
+        <template 
+            ngFor 
+            [ngForOf]="passengers" 
+            let-passenger 
+            let-i="index">
+            <li>
+                {{i}} - {{passenger.fullname}}
+            </li>
+        </template>
+    </ul>
+    <hr>
+    <ul>
+        <li *ngFor="let passenger of passengers; let i = index;">
+            {{i}} - {{passenger.fullname}}
+        </li>
+    </ul>
     
-    <input 
-        type="text" 
-        [value]="name" 
-        (input)="handleChange($event.target.value)">
-
-    <template [ngIf]="name.length > 0">
-        <div>
-            Searching 🕵️‍♀️ {{name}} ...
-        </div>
-    </template>
-
-    <div *ngIf="name.length > 0">
-        Searching 🕵️‍♀️ {{name}} ...
-    </div>
 </div>
