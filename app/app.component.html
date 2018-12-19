@@ -5,24 +5,23 @@
         <li *ngFor="let passenger of passengers; let i = index;">
             <span 
                 class="status" 
-                [class.checked-in]="passenger.checkedIn" 
-                [class.is-vip]="passenger.isVip">
+                [class.checked-in]="passenger.checkedIn">
             </span>
             {{i}} - {{passenger.fullname}}
+            <h1>{{passenger | json}}</h1>
+            <div class="date">
+                Check in date: 
+                {{ 
+                    passenger.checkInDate 
+                    ? (passenger.checkInDate | date: 'yMMMMd') 
+                    : 'Not checkedIn🏷'
+                }}
+            </div>
+            <div class="children">
+                Children: {{passenger.children?.length || 0}}
+            </div>
         </li>
     </ul>
     <hr>
-    <p>ngClass Binding (if multiple class needed)</p>
-    <ul>
-        <li *ngFor="let passenger of passengers; let i = index;">
-            <span 
-                class="status" 
-                [ngClass]="{
-                    'checked-in': passenger.checkedIn,
-                    'is-vip': passenger.isVip
-                }">
-            </span>
-            {{i}} - {{passenger.fullname}}
-        </li>
-    </ul>
+    
 </div>
