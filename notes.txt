@@ -3,3 +3,9 @@ Two way Data - binding: https://github.com/prabhu-raja/a-19-motto-fundamentals/c
 Tempate # ref variable - https://github.com/prabhu-raja/a-19-motto-fundamentals/commit/99a77b77802b6ad749383aa17b3ebe61c9c5eab7
 
 Class vs ngClass binding -  https://github.com/prabhu-raja/a-19-motto-fundamentals/commit/c3ee8bc06abfaf964aa60d7254e7453b4881c7ed
+
+@Input:
+https://github.com/prabhu-raja/a-19-motto-fundamentals/commit/aa3be10f0a659a1b25097d591ae0626efaa3aa73
+
+@Output and Event Emitters:
+https://github.com/prabhu-raja/a-19-motto-fundamentals/commit/c262d37ef398dc2c7f109b8010aeebc51a101289
