@@ -52,5 +52,12 @@ export class PassengerDashboardComponent implements OnInit {
         ];
     }
 
+    handleRemove(evt: Passenger) {
+        console.log('evt💥:', evt);
+    }
+
+    handleEdit(evt: Passenger) {
+        console.log('evt✂️:', evt);
+    }
     
 }
