@@ -54,10 +54,21 @@ export class PassengerDashboardComponent implements OnInit {
 
     handleRemove(evt: Passenger) {
         console.log('evt💥:', evt);
+        this.passengers = this.passengers.filter(psgr => psgr.id != evt.id);
+        console.log('Removed :', this.passengers);
     }
 
     handleEdit(evt: Passenger) {
         console.log('evt✂️:', evt);
+        console.log('Passengers🎠:', this.passengers);
+
+        this.passengers = this.passengers.map(psgr => {
+            if(psgr.id === evt.id){
+                psgr = Object.assign({}, psgr, evt);
+            }
+            return psgr;
+        })
+        console.log('Passengers👛:', this.passengers);
     }
     
 }
