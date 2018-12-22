@@ -24,9 +24,11 @@
   },
   "scripts": {
     "prestart": "webpack --config vendor/webpack.config.js",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "compodoc": "./node_modules/.bin/compodoc -p tsconfig.json"
   },
   "devDependencies": {
+    "@compodoc/compodoc": "^1.1.7",
     "@types/core-js": "0.9.34",
     "@types/node": "6.0.46",
     "angular2-template-loader": "0.6.0",
