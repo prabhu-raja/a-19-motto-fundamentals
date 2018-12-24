@@ -25,7 +25,7 @@ export class PassengerDetailComponent implements OnChanges, OnInit {
     }
 
     ngOnInit() {
-        console.log('object :');
+        
     }
 
     onNameChange(value: string) {
