@@ -18,7 +18,6 @@ export class PassengerDashboardComponent implements OnInit {
             .subscribe((data: Passenger[]) => {
                 this.passengers = data;
             })
-        
     }
 
     handleRemove(evt: Passenger) {
