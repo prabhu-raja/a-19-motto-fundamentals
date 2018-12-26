@@ -9,4 +9,10 @@ import { Component, Input } from "@angular/core";
 export class PassengerFormComponent {
     @Input()
     detail: Passenger;
+
+    toggleCheckIn(isCheckedIn: boolean) {
+        if(isCheckedIn) {
+            this.detail.checkInDate = Date.now();
+        }
+    }
 }
