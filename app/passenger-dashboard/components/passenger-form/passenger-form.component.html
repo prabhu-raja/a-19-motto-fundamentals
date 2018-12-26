@@ -1,0 +1,16 @@
+<form #myForm="ngForm" novalidate>
+    <div>{{detail | json}}</div>
+
+    <div>Passenger Name: </div>
+    <input 
+        type="text" 
+        name="fullname" 
+        [ngModel]="detail?.fullname">
+    <div>Passenger Id:</div>
+    <input 
+        type="number" 
+        name="id" 
+        [ngModel]="detail?.id">
+
+    {{myForm.value | json}}
+</form>
