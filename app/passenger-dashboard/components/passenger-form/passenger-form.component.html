@@ -1,4 +1,4 @@
-<form #myForm="ngForm" novalidate>
+<form (submit)="handleSubmit(myForm.value, myForm.valid)" #myForm="ngForm" novalidate>
     <div>{{detail | json}}</div>
 
     <div>Passenger Name: </div>
@@ -59,4 +59,7 @@
     <p>Form Valid - {{myForm.valid}}</p>
     <p>Form Invalid - {{myForm.invalid}}</p>
     <!--  -->
+    <button type="submit" [disabled]="myForm.invalid">
+        Update Passenger
+    </button>
 </form>

@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { Passenger } from './../../models/passenger.interface';
 import { Baggage } from './../../models/baggage.interface';
 
@@ -10,6 +10,9 @@ import { Baggage } from './../../models/baggage.interface';
 export class PassengerFormComponent {
     @Input()
     detail: Passenger;
+
+    @Output()
+    update: EventEmitter<Passenger> = new EventEmitter();
 
     baggage: Baggage[] = [
         {
@@ -33,6 +36,13 @@ export class PassengerFormComponent {
     toggleCheckIn(isCheckedIn: boolean) {
         if(isCheckedIn) {
             this.detail.checkInDate = Date.now();
+        }
+    }
+
+    handleSubmit(psgr: Passenger, isValid: boolean){
+        if (isValid) {
+            console.table(psgr);
+            this.update.emit(psgr);
         }
     }
 }
