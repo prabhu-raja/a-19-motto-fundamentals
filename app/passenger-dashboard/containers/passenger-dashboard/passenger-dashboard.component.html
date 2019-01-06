@@ -1,10 +1,15 @@
 <div>
     <passenger-count [items]="passengers"></passenger-count>
     <p>{{passengers | json}}</p>
+    <div *ngFor="let passenger of passengers;">
+        {{ passenger.fullname }}
+    </div>
+    <hr>
     <passenger-detail 
         *ngFor="let passenger of passengers" 
         [detail]="passenger" 
         (remove)="handleRemove($event)" 
-        (edit)="handleEdit($event)">
+        (edit)="handleEdit($event)" 
+        (view)="handleView($event)">
     </passenger-detail>
 </div>
